@@ -170,4 +170,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6cf8a64eda2bbd43af2cdd68f9f8931, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PestaEnemy
-  moveSpeed: 1
+  moveSpeed: 2

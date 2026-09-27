@@ -61,7 +61,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.72215, y: -0.11358, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 6, y: 6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5847502536992066155}
@@ -202,8 +202,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e6de6bc232bd42498f6f16d129ed417, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrollEnemy
-  moveSpeed: -2
+  moveSpeed: -5
   whatIsWall:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 128
   wallCheck: {fileID: 5847502536992066155}
