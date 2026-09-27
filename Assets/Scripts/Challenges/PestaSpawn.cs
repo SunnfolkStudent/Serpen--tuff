@@ -4,10 +4,8 @@ using UnityEngine;
 public class PestaSpawn : MonoBehaviour
 {
     public GameObject pesta;
-
     public float pestaTimer;
-
-
+    
     private void Update()
     {
         if (pestaTimer > 0)
