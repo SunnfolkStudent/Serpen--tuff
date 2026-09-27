@@ -23,15 +23,16 @@ public class TrollEnemy : MonoBehaviour
     {
         return Physics2D.OverlapCircle(wallCheck.position, 0.1f, whatIsWall);
     }
+    
     void Update()
     {
         if (DetectWall())
         {
             moveSpeed *= -1;
-            transform.localScale = new Vector2(transform.localScale.x * -1f, 1f);
+            transform.localScale = new Vector2(transform.localScale.x * -1f, 2f);
         }
     }
-
+    
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.yellow;
