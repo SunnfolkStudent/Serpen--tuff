@@ -194,7 +194,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InputManager
   Horizontal: 0
-  Jump: 0
+  Jump: 1
 --- !u!1 &7651083516997734408
 GameObject:
   m_ObjectHideFlags: 0

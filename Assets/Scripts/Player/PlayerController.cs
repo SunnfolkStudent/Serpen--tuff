@@ -1,3 +1,5 @@
+using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -11,6 +13,9 @@ public class PlayerController : MonoBehaviour
     private InputManager _input;
     private Rigidbody2D _rigidbody2D;
     private GameObject _light;
+    private InputSystem_Actions _inputSystem;
+    private bool isInvincible = false;
+    public bool canHide;
     
 
     private void Start()
@@ -30,7 +35,7 @@ public class PlayerController : MonoBehaviour
 			playerIsGrounded = false;
 		}
 
-		if (_input.Jump && playerIsGrounded)
+		if (_input.Jump && playerIsGrounded && !canHide)
 		{
 			_rigidbody2D.linearVelocityY = jumpSpeed;
 		}
@@ -45,6 +50,13 @@ public class PlayerController : MonoBehaviour
 		}
 	}
 	
+	private void OnTriggerStay2D(Collider2D other)
+	{
+		if (other.transform.CompareTag("Hide"))
+			{
+			canHide = true;
+			}
+	}
     		
 	private void FixedUpdate()
 	{
@@ -55,4 +67,13 @@ public class PlayerController : MonoBehaviour
 		Gizmos.color = Color.yellow;
 		Gizmos.DrawWireCube(groundCheck.position, groundBoxSize);
 	}
+	private IEnumerator BecomeTemporarilyInvincible()
+	{
+		Debug.Log("Player turned invincible!");
+		isInvincible = true;
+		yield return new WaitForSeconds(5f);
+		isInvincible = false;
+		Debug.Log("Player is no longer invincible!");
+	}
 }
+
