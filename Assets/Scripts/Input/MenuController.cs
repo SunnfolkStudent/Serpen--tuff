@@ -23,7 +23,7 @@ public class MenuController : MonoBehaviour
        _startCutscene = true;
         StartCoroutine(FadeOutButtons());
        
-        // SceneManager.LoadScene("Stage1");
+        
     }
 
     private void Update()
@@ -33,10 +33,21 @@ public class MenuController : MonoBehaviour
             while (background.position != backgroundMove.position)
             {
                 background.transform.position = Vector3.MoveTowards(background.position, backgroundMove.position, 0.2f * Time.deltaTime * Screen.width);
+                if (Mathf.Approximately(background.position.y, backgroundMove.position.y))
+                {
+                    background.position = backgroundMove.position;
+                }
                 return;
                 
             } 
             StartCoroutine(FadeOutTitle());
+            while (playerSprite.position != playerSpriteMove.position)
+            {
+                playerSprite.transform.position = Vector3.MoveTowards(playerSprite.position, playerSpriteMove.position, 0.2f * Time.deltaTime * Screen.width);
+                return;
+            }
+
+            SceneManager.LoadScene("Stage1");
         }
     }
 

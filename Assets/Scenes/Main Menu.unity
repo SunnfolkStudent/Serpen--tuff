@@ -408,6 +408,37 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!1 &542323429
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 542323430}
+  m_Layer: 0
+  m_Name: playerMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &542323430
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 542323429}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -339, y: -163, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1986629927}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &838232459
 GameObject:
   m_ObjectHideFlags: 0
@@ -1021,7 +1052,7 @@ GameObject:
   - component: {fileID: 1924137029}
   - component: {fileID: 1924137028}
   m_Layer: 0
-  m_Name: EventSystem
+  m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1184,6 +1215,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1087788128}
+  - {fileID: 542323430}
   - {fileID: 838232460}
   - {fileID: 1002697784}
   - {fileID: 2111161792}
@@ -1393,8 +1425,8 @@ MonoBehaviour:
   canvasGroupTitle: {fileID: 516706202}
   background: {fileID: 838232460}
   backgroundMove: {fileID: 1087788128}
-  playerSprite: {fileID: 0}
-  playerSpriteMove: {fileID: 0}
+  playerSprite: {fileID: 1155980930}
+  playerSpriteMove: {fileID: 542323430}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
