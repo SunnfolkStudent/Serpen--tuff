@@ -17,24 +17,17 @@ public class PlayerController : MonoBehaviour
     private InputSystem_Actions _inputSystem;
     private bool isInvincible = false;
     public bool canHide;
-<<<<<<< Updated upstream
     
     
-=======
     private CircleCollider2D _circleCollider2D;
->>>>>>> Stashed changes
 
     private void Start()
     {
         _input = GetComponent<InputManager>();
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _light = transform.GetChild(1).gameObject;
-<<<<<<< Updated upstream
         _rigidbody2D.gravityScale = 0;
-        
-=======
         _circleCollider2D = GetComponent<CircleCollider2D>();
->>>>>>> Stashed changes
     }
 	private void Update()
 	{
