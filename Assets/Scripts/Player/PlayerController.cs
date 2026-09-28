@@ -17,12 +17,15 @@ public class PlayerController : MonoBehaviour
     private bool isInvincible = false;
     public bool canHide;
     
+    
 
     private void Start()
     {
         _input = GetComponent<InputManager>();
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _light = transform.GetChild(1).gameObject;
+        _rigidbody2D.gravityScale = 0;
+        
     }
 	private void Update()
 	{

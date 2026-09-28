@@ -7,6 +7,8 @@ public class NøkkenTrigger : MonoBehaviour
     private float _randomX;
     private Vector2 _randomSpawn;
     
+
+   
     
     private void OnTriggerEnter2D(Collider2D other)
     {
