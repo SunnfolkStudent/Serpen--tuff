@@ -5,6 +5,7 @@ public class NøkkenEnemy : MonoBehaviour
     private Transform _target;
     private Rigidbody2D _rigidbody;
     private int _direction;
+    
 
     public float moveSpeed;
     
@@ -13,6 +14,7 @@ public class NøkkenEnemy : MonoBehaviour
     {
         _target = GameObject.Find("Player").transform;
         _rigidbody = GetComponent<Rigidbody2D>();
+       
 
         if (_target.transform.position.x > transform.position.x)
         {
@@ -29,8 +31,5 @@ public class NøkkenEnemy : MonoBehaviour
         _rigidbody.linearVelocityX = moveSpeed * _direction;
     }
    
-    void Update()
-    {
-        
-    }
+   
 }
