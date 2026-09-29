@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
         _input = GetComponent<InputManager>();
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _light = transform.GetChild(1).gameObject;
-        _rigidbody2D.gravityScale = 0;
+        _rigidbody2D.gravityScale = 1.5f;
         _circleCollider2D = GetComponent<CircleCollider2D>();
     }
 	private void Update()
@@ -47,7 +47,11 @@ public class PlayerController : MonoBehaviour
 
 		if (_input.Jump && playerIsGrounded && canHide)
 		{
-			if (isInvincible) return;
+			if (isInvincible)
+			{
+				StopCoroutine(BecomeTemporarilyInvincible());
+				return;
+			}
 			StartCoroutine(BecomeTemporarilyInvincible());
 		}
 
@@ -67,12 +71,17 @@ public class PlayerController : MonoBehaviour
 		{
 			canHide = true;
 		}
+		if (other.transform.CompareTag("NoHide"))
+		{
+			canHide = false;
+		}
 	}
-    		
+
 	private void FixedUpdate()
 	{
 		_rigidbody2D.linearVelocityX = _input.Horizontal * moveSpeed;
 	}
+
 	private void OnDrawGizmos()
 	{
 		Gizmos.color = Color.yellow;
@@ -81,10 +90,12 @@ public class PlayerController : MonoBehaviour
 	private IEnumerator BecomeTemporarilyInvincible()
 	{
 		Debug.Log("Player turned invincible!");
+		moveSpeed = 0f;
 		_rigidbody2D.gravityScale = 0;
 		_circleCollider2D.enabled = false;
 		isInvincible = true;
 		yield return new WaitForSeconds(5f);
+		moveSpeed = 2f;
 		_rigidbody2D.gravityScale = 1;
 		_circleCollider2D.enabled = true;
 		isInvincible = false;

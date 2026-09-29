@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Hide
   - Death
+  - NoHide
   layers:
   - Default
   - TransparentFX
