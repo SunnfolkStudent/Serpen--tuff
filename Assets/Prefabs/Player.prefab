@@ -181,6 +181,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   groundBoxSize: {x: 0.8, y: 0.2}
+  canHide: 0
 --- !u!114 &3672504083866171082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -248,7 +249,7 @@ MonoBehaviour:
     rid: 8373204981663662090
   m_FalloffIntensity: 0.55
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.5
+  m_Intensity: 5
   m_LightVolumeIntensity: 0.1
   m_LightVolumeEnabled: 0
   m_ApplyToSortingLayers: 00000000i
@@ -270,8 +271,8 @@ MonoBehaviour:
     serializedVersion: 0
     m_Bits: 1
   m_LocalBounds:
-    m_Center: {x: 0.35509998, y: 0.114249974, z: 0}
-    m_Extent: {x: 1.2983, y: 1.09665, z: 0}
+    m_Center: {x: 0.37510002, y: 0.046549976, z: 0}
+    m_Extent: {x: 1.2795, y: 1.02805, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 5
@@ -282,21 +283,15 @@ MonoBehaviour:
   m_ShapeLightFalloffSize: 0.9
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
-  - {x: 0.4405275, y: 0.27437633, z: 0}
-  - {x: 0.34988326, y: 0.30843207, z: 0}
-  - {x: 0.29606932, y: 0.3116638, z: 0}
-  - {x: 0.24700677, y: 0.28095084, z: 0}
-  - {x: 0.14967191, y: 0.16405433, z: 0}
-  - {x: 0.042326327, y: 0.054043546, z: 0}
-  - {x: -0.03443454, y: 0.041388407, z: 0}
-  - {x: -0.045271333, y: -0.005847963, z: 0}
-  - {x: -0.0278313, y: -0.037785105, z: 0}
+  - {x: 0.24847962, y: 0.06921323, z: 0}
+  - {x: 0.024375506, y: 0.011859384, z: 0}
+  - {x: -0.0039182957, y: 0.008179609, z: 0}
+  - {x: -0.003087073, y: -0.02738882, z: 0}
+  - {x: 0.006274957, y: -0.030604873, z: 0}
   - {x: 0.033712167, y: -0.03443891, z: 0}
   - {x: 0.11701524, y: -0.08242754, z: 0}
   - {x: 0.7550838, y: -0.080994785, z: 0}
-  - {x: 0.68441266, y: 0.06085229, z: 0}
-  - {x: 0.6209827, y: 0.11002926, z: 0}
-  - {x: 0.5546411, y: 0.17978776, z: 0}
+  - {x: 0.70801246, y: 0.1769634, z: 0}
   references:
     version: 2
     RefIds:

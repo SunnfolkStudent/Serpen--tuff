@@ -48,20 +48,22 @@ public class PlayerController : MonoBehaviour
 		}
 
 
-		if (_input.Jump && !isInvincible && canHide)
+		if (_input.Jump && !isInvincible && canHide && playerIsGrounded)
 		{
 			Debug.Log("Player turned invincible!");
 			moveSpeed = 0f;
 			_rigidbody2D.gravityScale = 0f;
 			_circleCollider2D.enabled = false;
 			isInvincible = true;
+			_light.SetActive(false);
 		}
-		else if (_input.Jump && isInvincible && canHide)
+		else if (_input.Jump && isInvincible && canHide && playerIsGrounded)
 		{
 			moveSpeed = 2f;
 			_rigidbody2D.gravityScale = 1.5f;
 			_circleCollider2D.enabled = true;
 			isInvincible = false;
+			_light.SetActive(true);
 			Debug.Log("Player is no longer invincible!");	
 		}
 
