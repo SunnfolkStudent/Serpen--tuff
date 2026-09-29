@@ -13,7 +13,8 @@ public class PlayerController : MonoBehaviour
     public Vector2 groundBoxSize = new Vector2(0.8f, 0.2f);
     private InputManager _input;
     private Rigidbody2D _rigidbody2D;
-    private GameObject _light;
+    private GameObject _lightNormal;
+    private GameObject _lightHide;
     private InputSystem_Actions _inputSystem;
     private bool isInvincible = false;
     public bool canHide;
@@ -27,9 +28,11 @@ public class PlayerController : MonoBehaviour
     {
         _input = GetComponent<InputManager>();
         _rigidbody2D = GetComponent<Rigidbody2D>();
-        _light = transform.GetChild(1).gameObject;
+        _lightNormal = transform.GetChild(1).gameObject;
+        _lightHide = transform.GetChild(2).gameObject;
         _rigidbody2D.gravityScale = 1.5f;
         _circleCollider2D = GetComponent<CircleCollider2D>();
+        _lightHide.SetActive(false);
     }
 	private void Update()
 	{
@@ -55,7 +58,8 @@ public class PlayerController : MonoBehaviour
 			_rigidbody2D.gravityScale = 0f;
 			_circleCollider2D.enabled = false;
 			isInvincible = true;
-			_light.SetActive(false);
+			_lightNormal.SetActive(false);
+			_lightHide.SetActive(true);
 		}
 		else if (_input.Jump && isInvincible && canHide && playerIsGrounded)
 		{
@@ -63,7 +67,8 @@ public class PlayerController : MonoBehaviour
 			_rigidbody2D.gravityScale = 1.5f;
 			_circleCollider2D.enabled = true;
 			isInvincible = false;
-			_light.SetActive(true);
+			_lightNormal.SetActive(true);
+			_lightHide.SetActive(false);
 			Debug.Log("Player is no longer invincible!");	
 		}
 
@@ -77,11 +82,15 @@ public class PlayerController : MonoBehaviour
 		
 		if (_input.Horizontal < 0)
 		{
-			_light.transform.rotation = new Quaternion( 0f,  180f,  0, 0f);
+			_lightNormal.transform.rotation = new Quaternion( 0f,  180f, 0, 0f);
+			_lightHide.transform.localPosition = new Vector2(-0.5f, -0.2f);
+			_lightNormal.transform.localPosition = new Vector2(-0.5f, -0.2f);
 		}
 		else if (_input.Horizontal > 0)
 		{
-			_light.transform.rotation = new Quaternion( 0f,  0f, 0, 0f);
+			_lightNormal.transform.rotation = new Quaternion( 0f,  0f, 0, 0f);
+			_lightHide.transform.localPosition = new Vector2(0.5f, -0.2f);
+			_lightNormal.transform.localPosition = new Vector2(0.5f, -0.2f);
 		}
 	}
 	
