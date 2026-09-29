@@ -21,6 +21,8 @@ public class PlayerController : MonoBehaviour
     
     private CircleCollider2D _circleCollider2D;
 
+
+    
     private void Start()
     {
         _input = GetComponent<InputManager>();
@@ -39,22 +41,38 @@ public class PlayerController : MonoBehaviour
 		{
 			playerIsGrounded = false;
 		}
-
+		
 		if (_input.Jump && playerIsGrounded && !canHide)
 		{
 			_rigidbody2D.linearVelocityY = jumpSpeed;
 		}
 
-		if (_input.Jump && playerIsGrounded && canHide)
+
+		if (_input.Jump && !isInvincible && canHide)
 		{
-			if (isInvincible)
-			{
-				StopCoroutine(BecomeTemporarilyInvincible());
-				return;
-			}
-			StartCoroutine(BecomeTemporarilyInvincible());
+			Debug.Log("Player turned invincible!");
+			moveSpeed = 0f;
+			_rigidbody2D.gravityScale = 0f;
+			_circleCollider2D.enabled = false;
+			isInvincible = true;
+		}
+		else if (_input.Jump && isInvincible && canHide)
+		{
+			moveSpeed = 2f;
+			_rigidbody2D.gravityScale = 1.5f;
+			_circleCollider2D.enabled = true;
+			isInvincible = false;
+			Debug.Log("Player is no longer invincible!");	
 		}
 
+
+		/*if (_input.Jump && playerIsGrounded && canHide && !isInvincible)
+		{
+			StartCoroutine(BecomeTemporarilyInvincible());
+		}*/
+
+		
+		
 		if (_input.Horizontal < 0)
 		{
 			_light.transform.rotation = new Quaternion( 0f,  180f,  0, 0f);
@@ -87,20 +105,20 @@ public class PlayerController : MonoBehaviour
 		Gizmos.color = Color.yellow;
 		Gizmos.DrawWireCube(groundCheck.position, groundBoxSize);
 	}
-	private IEnumerator BecomeTemporarilyInvincible()
+	/*private IEnumerator BecomeTemporarilyInvincible()
 	{
 		Debug.Log("Player turned invincible!");
 		moveSpeed = 0f;
-		_rigidbody2D.gravityScale = 0;
+		_rigidbody2D.gravityScale = 0f;
 		_circleCollider2D.enabled = false;
 		isInvincible = true;
 		yield return new WaitForSeconds(5f);
 		moveSpeed = 2f;
-		_rigidbody2D.gravityScale = 1;
+		_rigidbody2D.gravityScale = 1.5f;
 		_circleCollider2D.enabled = true;
 		isInvincible = false;
-		Debug.Log("Player is no longer invincible!");
-	}
+		Debug.Log("Player is no longer invincible!");	
+	}*/
 	private void OnCollisionEnter2D(Collision2D other)
 	{
 		if (other.transform.CompareTag("Death"))
