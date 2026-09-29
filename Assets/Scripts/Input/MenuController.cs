@@ -12,7 +12,7 @@ public class MenuController : MonoBehaviour
     public CanvasGroup canvasGroupStart;
     public CanvasGroup canvasGroupQuit;
     public CanvasGroup canvasGroupTitle;
-    public Transform background;
+    public RectTransform background;
     public Transform backgroundMove;
     public Transform playerSprite;
     public Transform playerSpriteMove;
@@ -30,18 +30,18 @@ public class MenuController : MonoBehaviour
     {
         if (_startCutscene)
         {
-            while (background.position != backgroundMove.position)
+            while (!Mathf.Approximately(background.position.y, backgroundMove.position.y))
             {
                 background.transform.position = Vector3.MoveTowards(background.position, backgroundMove.position, 0.2f * Time.deltaTime * Screen.width);
                 if (Mathf.Approximately(background.position.y, backgroundMove.position.y))
                 {
                     background.position = backgroundMove.position;
+                   
                 }
                 return;
-                
             } 
             StartCoroutine(FadeOutTitle());
-            while (playerSprite.position != playerSpriteMove.position)
+            while (!Mathf.Approximately(playerSprite.position.x, playerSpriteMove.position.x))
             {
                 playerSprite.transform.position = Vector3.MoveTowards(playerSprite.position, playerSpriteMove.position, 0.2f * Time.deltaTime * Screen.width);
                 return;
@@ -70,7 +70,6 @@ public class MenuController : MonoBehaviour
     }
     private IEnumerator FadeOutTitle()
     {
-        
         while (canvasGroupTitle.alpha  > 0)
         {
             canvasGroupTitle.alpha -= 0.001f;
