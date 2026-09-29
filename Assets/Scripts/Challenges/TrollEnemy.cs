@@ -14,10 +14,7 @@ public class TrollEnemy : MonoBehaviour
     public bool audioFarActive = false;
     public bool audioMediumActive = false;
     public bool audioNearActive = false;
-    public CircleCollider2D stompFar;
-    public CircleCollider2D stompMedium;
-    public CircleCollider2D stompNear;
-
+   
     private Transform _target;
     private Rigidbody2D _rigidbody2D;
     private AudioSource _audioSource;
@@ -37,44 +34,35 @@ public class TrollEnemy : MonoBehaviour
         _rigidbody2D.linearVelocityX = moveSpeed;
         
     }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (CompareTag("Player"))
-        {
-            
-        }
-    }
-
+    
     IEnumerator StompFar()
     {
         audioFarActive = true;
-
+        _audioSource.volume = 0.3f;
         while (audioFarActive)
         {
             _audioSource.PlayOneShot(stomp);
             yield return new WaitForSeconds(2f);
             yield return null;
         }
-
-
-
     }
 
     IEnumerator StompMedium()
     {
         audioMediumActive = true;
-        for (int i = 0; i < _soundTimer; i = 0)
+        _audioSource.volume = 0.6f;
+        while (audioMediumActive)
         {
             _audioSource.PlayOneShot(stomp);
             yield return new WaitForSeconds(1f);
-        } 
+        }
     }
 
     IEnumerator StompNear()
     {
         audioNearActive = true;
-        for (int i = 0; i < _soundTimer; i = 0)
+        _audioSource.volume = 1f;
+        while (audioNearActive)
         {
             _audioSource.PlayOneShot(stomp);
             yield return new WaitForSeconds(0.5f);
@@ -94,36 +82,66 @@ public class TrollEnemy : MonoBehaviour
             transform.localScale = new Vector2(transform.localScale.x * -1f, transform.localScale.y);
         }
 
-        /*if ((Vector2.Distance(transform.position, _target.position) < sightRangeFar) && !audioFarActive && !audioMediumActive && !audioFarActive )
+        if ((Vector2.Distance(transform.position, _target.position) < sightRangeFar)
+            && (Vector2.Distance(transform.position, _target.position) > sightRangeMedium)
+            && !audioFarActive && !audioMediumActive && !audioFarActive )
         {
-            StartCoroutine(StompFar());
            
+            StopCoroutine(StompMedium());
+            audioMediumActive = false;
+            audioNearActive = false;
+            StartCoroutine(StompFar());
         } 
-        else if ((Vector2.Distance(transform.position, _target.position) < sightRangeMedium) && !audioMediumActive)
+        else if ((Vector2.Distance(transform.position, _target.position) < sightRangeMedium)
+                 && (Vector2.Distance(transform.position, _target.position) > sightRangeNear)
+                 && !audioMediumActive && !audioNearActive)
+        {
+           
+                StopCoroutine(StompFar());
+                StopCoroutine(StompNear());
+                audioFarActive = false;
+                audioNearActive = false;
+                StartCoroutine(StompMedium());
+        }
+        else if ((Vector2.Distance(transform.position, _target.position) < sightRangeNear) && !audioNearActive) 
+        {
+            StopCoroutine(StompMedium());
+            audioMediumActive = false;
+            audioFarActive = false;
+            StartCoroutine(StompNear());
+        }
+
+        if ((Vector2.Distance(transform.position, _target.position) > sightRangeNear) 
+            && Vector2.Distance(transform.position, _target.position) < sightRangeMedium
+            && audioNearActive)
+        {
+            audioNearActive = false;
+            StopCoroutine(StompNear());
+        }
+        else if ((Vector2.Distance(transform.position, _target.position) > sightRangeMedium)
+                 && (Vector2.Distance(transform.position, _target.position) < sightRangeFar)
+                 && audioMediumActive)
+        {
+            audioMediumActive = false;
+            StopCoroutine(StompMedium());
+        }
+        else if (Vector2.Distance(transform.position, _target.position) > sightRangeFar)
         {
             audioFarActive = false;
-                StopCoroutine(StompFar());
-                StartCoroutine(StompMedium());
-            
+            StopCoroutine(StompFar());
         }
-        else if ((Vector2.Distance(transform.position, _target.position) < sightRangeNear) &&!audioNearActive) 
-        { 
-            StopCoroutine(StompMedium());
-            StartCoroutine(StompNear());
-        }*/
     }
     
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(wallCheck.position, 0.1f);
-        /*Gizmos.color = Color.chartreuse;
-        Gizmos.DrawWireSphere(stompFar.transform.position, 4);
+        Gizmos.color = Color.chartreuse;
+        Gizmos.DrawWireSphere(transform.position, sightRangeFar);
         Gizmos.color = Color.aquamarine;
-        Gizmos.DrawWireSphere(stompMedium.transform.position, 3);
+        Gizmos.DrawWireSphere(transform.position, sightRangeMedium);
         Gizmos.color = Color.blue;
-        Gizmos.DrawWireSphere(stompNear.transform.position, 2);
-        */
+        Gizmos.DrawWireSphere(transform.position, sightRangeNear);
         
     }
 
