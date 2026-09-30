@@ -63,6 +63,7 @@ public class TrollEnemy : MonoBehaviour
             _audioSource.PlayOneShot(stompMedium);
             yield return new WaitForSeconds(4f);
         }
+        
     }
 
     IEnumerator StompNear()
