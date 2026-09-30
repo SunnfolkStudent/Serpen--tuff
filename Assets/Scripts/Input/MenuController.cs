@@ -12,6 +12,7 @@ public class MenuController : MonoBehaviour
     public CanvasGroup canvasGroupStart;
     public CanvasGroup canvasGroupQuit;
     public CanvasGroup canvasGroupTitle;
+    public CanvasGroup canvasGroupScreen;
     public RectTransform background;
     public Transform backgroundMove;
     public Transform playerSprite;
@@ -46,8 +47,9 @@ public class MenuController : MonoBehaviour
                 playerSprite.transform.position = Vector3.MoveTowards(playerSprite.position, playerSpriteMove.position, 0.2f * Time.deltaTime * Screen.width);
                 return;
             }
+            StartCoroutine(LevelFader());
 
-            SceneManager.LoadScene("Stage1");
+            
         }
     }
 
@@ -78,6 +80,18 @@ public class MenuController : MonoBehaviour
         }
         yield return null;
         
+    }
+
+    private IEnumerator LevelFader()
+    {
+        while (canvasGroupScreen.alpha  < 1)
+        {
+            canvasGroupScreen.alpha += 0.001f;
+            yield return new WaitForSeconds(0.01f);
+            yield return null;
+        }
+        SceneManager.LoadScene("Stage1");
+        yield return null;
     }
 
 }
