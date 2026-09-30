@@ -156,7 +156,7 @@ public class PlayerController : MonoBehaviour
 			}
 			else
 			{
-				_animator.Play("idle.R");
+				_animator.Play("idle_R");
 			}
 		}
 		

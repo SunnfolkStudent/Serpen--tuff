@@ -7,18 +7,20 @@ public class TrollEnemy : MonoBehaviour
 
     public LayerMask whatIsWall;
     public Transform wallCheck;
-    public AudioClip stomp;
     public float sightRangeFar;
     public float sightRangeMedium;
     public float sightRangeNear;
     public bool audioFarActive = false;
     public bool audioMediumActive = false;
     public bool audioNearActive = false;
+    public AudioClip stompSlow;
+    public AudioClip stompMedium;
+    public AudioClip stompFast;
    
     private Transform _target;
     private Rigidbody2D _rigidbody2D;
     private AudioSource _audioSource;
-    private int _soundTimer = 10;
+    private Animator _animator;
     
   
     void Start()
@@ -26,6 +28,7 @@ public class TrollEnemy : MonoBehaviour
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _audioSource = GetComponent<AudioSource>();
         _target = GameObject.Find("Player").transform;
+        _animator = GetComponent<Animator>();
         
     }
     
@@ -37,35 +40,40 @@ public class TrollEnemy : MonoBehaviour
     
     IEnumerator StompFar()
     {
+        _audioSource.Stop();
         audioFarActive = true;
         _audioSource.volume = 0.3f;
+       
         while (audioFarActive)
         {
-            _audioSource.PlayOneShot(stomp);
-            yield return new WaitForSeconds(2f);
+            _audioSource.PlayOneShot(stompSlow);
+            yield return new WaitForSeconds(8f);
             yield return null;
+            
         }
     }
 
     IEnumerator StompMedium()
     {
+        _audioSource.Stop();
         audioMediumActive = true;
         _audioSource.volume = 0.6f;
         while (audioMediumActive)
         {
-            _audioSource.PlayOneShot(stomp);
-            yield return new WaitForSeconds(1f);
+            _audioSource.PlayOneShot(stompMedium);
+            yield return new WaitForSeconds(4f);
         }
     }
 
     IEnumerator StompNear()
     {
+        _audioSource.Stop();
         audioNearActive = true;
         _audioSource.volume = 1f;
         while (audioNearActive)
         {
-            _audioSource.PlayOneShot(stomp);
-            yield return new WaitForSeconds(0.5f);
+            _audioSource.PlayOneShot(stompFast);
+            yield return new WaitForSeconds(4f);
         } 
     }
         
@@ -109,6 +117,7 @@ public class TrollEnemy : MonoBehaviour
             audioMediumActive = false;
             audioFarActive = false;
             StartCoroutine(StompNear());
+            _animator.Play("Troll_Chase");
         }
 
         if ((Vector2.Distance(transform.position, _target.position) > sightRangeNear) 
@@ -117,6 +126,7 @@ public class TrollEnemy : MonoBehaviour
         {
             audioNearActive = false;
             StopCoroutine(StompNear());
+            _animator.Play("Troll_Walk");
         }
         else if ((Vector2.Distance(transform.position, _target.position) > sightRangeMedium)
                  && (Vector2.Distance(transform.position, _target.position) < sightRangeFar)

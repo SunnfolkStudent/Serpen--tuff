@@ -33,7 +33,7 @@ public class MenuController : MonoBehaviour
         {
             while (!Mathf.Approximately(background.position.y, backgroundMove.position.y))
             {
-                background.transform.position = Vector3.MoveTowards(background.position, backgroundMove.position, 0.2f * Time.deltaTime * Screen.width);
+                background.transform.position = Vector3.MoveTowards(background.position, backgroundMove.position, 0.15f * Time.deltaTime * Screen.width);
                 if (Mathf.Approximately(background.position.y, backgroundMove.position.y))
                 {
                     background.position = backgroundMove.position;
@@ -44,7 +44,7 @@ public class MenuController : MonoBehaviour
             StartCoroutine(FadeOutTitle());
             while (!Mathf.Approximately(playerSprite.position.x, playerSpriteMove.position.x))
             {
-                playerSprite.transform.position = Vector3.MoveTowards(playerSprite.position, playerSpriteMove.position, 0.2f * Time.deltaTime * Screen.width);
+                playerSprite.transform.position = Vector3.MoveTowards(playerSprite.position, playerSpriteMove.position, 0.1f * Time.deltaTime * Screen.width);
                 return;
             }
             StartCoroutine(LevelFader());
