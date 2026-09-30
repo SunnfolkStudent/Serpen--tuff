@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -18,7 +19,7 @@ public class PlayerController : MonoBehaviour
     private InputSystem_Actions _inputSystem;
     private bool isInvincible = false;
     public bool canHide;
-    
+    public bool isDying;
     
     private BoxCollider2D _boxCollider2D;
     private Animator _animator;
@@ -142,13 +143,21 @@ public class PlayerController : MonoBehaviour
 	{
 		if (other.transform.CompareTag("Death"))
 		{
-			SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+			StartCoroutine(PlayerDeath());
 		}
+	}
+
+	private IEnumerator PlayerDeath()
+	{
+		isDying = true;
+		_animator.Play("death_R");
+		yield return new WaitForSeconds(0.5f);
+		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 	}
 
 	private void UpdateAnimations()
 	{
-		if (playerIsGrounded)
+		if (playerIsGrounded && !isDying)
 		{
 			if (_input.Horizontal != 0)
 			{
