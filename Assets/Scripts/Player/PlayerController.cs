@@ -21,6 +21,8 @@ public class PlayerController : MonoBehaviour
     
     
     private BoxCollider2D _boxCollider2D;
+    private Animator _animator;
+    private SpriteRenderer _spriteRenderer;
 
 
     
@@ -33,6 +35,8 @@ public class PlayerController : MonoBehaviour
         _rigidbody2D.gravityScale = 1.5f;
         _boxCollider2D = GetComponent<BoxCollider2D>();
         _lightHide.SetActive(false);
+        _animator = GetComponent<Animator>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
     }
 	private void Update()
 	{
@@ -85,13 +89,17 @@ public class PlayerController : MonoBehaviour
 			_lightNormal.transform.rotation = new Quaternion( 0f,  180f, 0, 0f);
 			_lightHide.transform.localPosition = new Vector2(-0.5f, -0.2f);
 			_lightNormal.transform.localPosition = new Vector2(-0.5f, -0.2f);
+			_spriteRenderer.flipX = true;
 		}
 		else if (_input.Horizontal > 0)
 		{
 			_lightNormal.transform.rotation = new Quaternion( 0f,  0f, 0, 0f);
 			_lightHide.transform.localPosition = new Vector2(0.5f, -0.2f);
 			_lightNormal.transform.localPosition = new Vector2(0.5f, -0.2f);
+			_spriteRenderer.flipX = false;
 		}
+
+		UpdateAnimations();
 	}
 	
 	private void OnTriggerStay2D(Collider2D other)
@@ -137,5 +145,22 @@ public class PlayerController : MonoBehaviour
 			SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 		}
 	}
+
+	private void UpdateAnimations()
+	{
+		if (playerIsGrounded)
+		{
+			if (_input.Horizontal != 0)
+			{
+				_animator.Play("right");
+			}
+			else
+			{
+				_animator.Play("idle.R");
+			}
+		}
+		
+	}
+	
 }
 
