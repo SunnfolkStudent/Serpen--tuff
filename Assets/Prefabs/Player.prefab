@@ -89,12 +89,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -5636670816609796199, guid: a314027faedd7c2429ce5a827267ea9d, type: 3}
+  m_Sprite: {fileID: -7020986518304198304, guid: 8fbc5f2116a92de46a8e9bf730528391, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.875, y: 1.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -148,6 +148,7 @@ MonoBehaviour:
     m_Bits: 8
   groundBoxSize: {x: 0.8, y: 0.2}
   canHide: 0
+  isDying: 0
 --- !u!114 &3672504083866171082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,9 +200,9 @@ BoxCollider2D:
   m_Offset: {x: -0.125, y: 0.75}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.6666667, y: 0}
-    oldSize: {x: 0.75, y: 1.5}
-    newSize: {x: 1, y: 1}
+    pivot: {x: 0.5714286, y: 0}
+    oldSize: {x: 0.875, y: 1.5}
+    newSize: {x: 0.875, y: 1.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -218,7 +219,7 @@ Animator:
   m_GameObject: {fileID: 1798262212573460217}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9205342905018203730, guid: a314027faedd7c2429ce5a827267ea9d, type: 3}
+  m_Controller: {fileID: 9205342905018203730, guid: 8fbc5f2116a92de46a8e9bf730528391, type: 3}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -256,7 +257,7 @@ Transform:
   m_GameObject: {fileID: 6474589771692884764}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.395, y: -0.19, z: 0}
+  m_LocalPosition: {x: 0.395, y: -0.13, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -281,9 +282,9 @@ MonoBehaviour:
     rid: -2
   m_SelectionSources:
     rid: 8373205022878728339
-  m_FalloffIntensity: 0.4
-  m_Color: {r: 0.81886786, g: 0.5088667, b: 0.3816233, a: 1}
-  m_Intensity: 0.5
+  m_FalloffIntensity: 0.49
+  m_Color: {r: 0.78113204, g: 0.52851427, b: 0.42299035, a: 1}
+  m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
   m_ApplyToSortingLayers: 00000000i
@@ -305,8 +306,8 @@ MonoBehaviour:
     serializedVersion: 0
     m_Bits: 1
   m_LocalBounds:
-    m_Center: {x: 0.00014996529, y: -0.00020003319, z: 0}
-    m_Extent: {x: 2.35995, y: 2.3601, z: 0}
+    m_Center: {x: -0.00014996529, y: 0.00034999847, z: 0}
+    m_Extent: {x: 4.1883497, y: 4.18875, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -314,7 +315,7 @@ MonoBehaviour:
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 1.86
+  m_ShapeLightFalloffSize: 3.69
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
   - {x: 0.5, y: 0, z: 0}
@@ -418,8 +419,8 @@ MonoBehaviour:
   m_SelectionSources:
     rid: 8373204981663662090
   m_FalloffIntensity: 0.883
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 5
+  m_Color: {r: 1, g: 0.8741874, b: 0.7830188, a: 1}
+  m_Intensity: 2
   m_LightVolumeIntensity: 0.1
   m_LightVolumeEnabled: 0
   m_ApplyToSortingLayers: 00000000i
@@ -441,8 +442,8 @@ MonoBehaviour:
     serializedVersion: 0
     m_Bits: 1
   m_LocalBounds:
-    m_Center: {x: 1.08145, y: 0.16260004, z: 0}
-    m_Extent: {x: 1.9858501, y: 1.2507, z: 0}
+    m_Center: {x: 1.06525, y: 0.22364998, z: 0}
+    m_Extent: {x: 1.85965, y: 1.19635, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 5
@@ -454,19 +455,34 @@ MonoBehaviour:
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
   - {x: 0.27191463, y: 0.32364976, z: 0}
-  - {x: 0.024375506, y: 0.011859384, z: 0}
-  - {x: -0.0039182957, y: 0.008179609, z: 0}
-  - {x: -0.003087073, y: -0.02738882, z: 0}
-  - {x: 0.006274957, y: -0.030604873, z: 0}
-  - {x: 0.033712167, y: -0.03443891, z: 0}
-  - {x: 0.11701524, y: -0.08242754, z: 0}
-  - {x: 1.5418335, y: -0.19086985, z: 0}
-  - {x: 2.11431, y: -0.08434266, z: 0}
-  - {x: 2.1676738, y: 0.029658737, z: 0}
-  - {x: 2.0507064, y: 0.15395859, z: 0}
+  - {x: 0.105481245, y: 0.07210946, z: 0}
+  - {x: 0.26720688, y: 0.0475739, z: 0}
+  - {x: 0.30008268, y: 0.058928374, z: 0}
+  - {x: 0.9119713, y: 0.03204303, z: 0}
+  - {x: 1.4862181, y: -0.06341789, z: 0}
+  - {x: 1.697539, y: -0.074553326, z: 0}
+  - {x: 1.9714687, y: -0.061543725, z: 0}
+  - {x: 2.0196447, y: -0.039793514, z: 0}
+  - {x: 2.026111, y: 0.017999459, z: 0}
+  - {x: 2.0242796, y: 0.05289884, z: 0}
+  - {x: 1.9943532, y: 0.11315127, z: 0}
+  - {x: 1.9212999, y: 0.17621179, z: 0}
+  - {x: 1.8435718, y: 0.21896234, z: 0}
+  - {x: 1.7813894, y: 0.26171282, z: 0}
+  - {x: 1.7211497, y: 0.3141794, z: 0}
+  - {x: 1.6337055, y: 0.3608163, z: 0}
   - {x: 1.548529, y: 0.40504733, z: 0}
-  - {x: 1.1233522, y: 0.48874348, z: 0}
+  - {x: 1.4840783, y: 0.42299896, z: 0}
+  - {x: 1.4121796, y: 0.442431, z: 0}
+  - {x: 1.3286219, y: 0.4715791, z: 0}
+  - {x: 1.2470073, y: 0.4851815, z: 0}
+  - {x: 1.1699891, y: 0.49845955, z: 0}
+  - {x: 1.0507436, y: 0.5123864, z: 0}
+  - {x: 0.9652424, y: 0.52015924, z: 0}
+  - {x: 0.81755877, y: 0.52015924, z: 0}
   - {x: 0.66804504, y: 0.5155263, z: 0}
+  - {x: 0.52996445, y: 0.47352228, z: 0}
+  - {x: 0.40948567, y: 0.4074533, z: 0}
   references:
     version: 2
     RefIds:
