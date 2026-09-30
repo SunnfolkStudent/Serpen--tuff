@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
     public bool canHide;
     
     
-    private CircleCollider2D _circleCollider2D;
+    private BoxCollider2D _boxCollider2D;
 
 
     
@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
         _lightNormal = transform.GetChild(1).gameObject;
         _lightHide = transform.GetChild(2).gameObject;
         _rigidbody2D.gravityScale = 1.5f;
-        _circleCollider2D = GetComponent<CircleCollider2D>();
+        _boxCollider2D = GetComponent<BoxCollider2D>();
         _lightHide.SetActive(false);
     }
 	private void Update()
@@ -56,7 +56,7 @@ public class PlayerController : MonoBehaviour
 			Debug.Log("Player turned invincible!");
 			moveSpeed = 0f;
 			_rigidbody2D.gravityScale = 0f;
-			_circleCollider2D.enabled = false;
+			_boxCollider2D.enabled = false;
 			isInvincible = true;
 			_lightNormal.SetActive(false);
 			_lightHide.SetActive(true);
@@ -65,7 +65,7 @@ public class PlayerController : MonoBehaviour
 		{
 			moveSpeed = 2f;
 			_rigidbody2D.gravityScale = 1.5f;
-			_circleCollider2D.enabled = true;
+			_boxCollider2D.enabled = true;
 			isInvincible = false;
 			_lightNormal.SetActive(true);
 			_lightHide.SetActive(false);
