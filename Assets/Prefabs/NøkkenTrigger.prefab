@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2766056051682436399}
   - component: {fileID: 430053777705187184}
   - component: {fileID: 6933666004851729867}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: "N\xF8kkenTrigger"
   m_TagString: Untagged
   m_Icon: {fileID: 0}

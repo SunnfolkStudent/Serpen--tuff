@@ -10,7 +10,7 @@ public class NøkkenTrigger : MonoBehaviour
 
    
     
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerStay2D(Collider2D other)
     {
         if (other.transform.CompareTag("Player"))
         {
@@ -20,7 +20,7 @@ public class NøkkenTrigger : MonoBehaviour
                 while ((-10 < _randomX) && (10 > _randomX))
                 {
                     _randomX = Random.Range(-20f, 20f);
-                    return;
+                    
                 }
             }
             else
