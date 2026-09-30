@@ -170,4 +170,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d6bf6a0e4875cf459ff57ed47784131, type: 3}
   m_Name: 
   m_EditorClassIdentifier: "Assembly-CSharp::N\xF8kkenEnemy"
+  "N\xF8kken": {fileID: 2727703800440348197}
   moveSpeed: 4
