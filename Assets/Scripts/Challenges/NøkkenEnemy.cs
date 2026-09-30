@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class NøkkenEnemy : MonoBehaviour
@@ -5,6 +6,7 @@ public class NøkkenEnemy : MonoBehaviour
     private Transform _target;
     private Rigidbody2D _rigidbody;
     private int _direction;
+    public GameObject Nøkken;
     
 
     public float moveSpeed;
@@ -30,6 +32,10 @@ public class NøkkenEnemy : MonoBehaviour
     {
         _rigidbody.linearVelocityX = moveSpeed * _direction;
     }
-   
-   
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.transform.CompareTag("NøkkenKill"))
+            Destroy(Nøkken);
+    }
 }
