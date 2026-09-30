@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4538909727466163200}
   m_Layer: 0
   m_Name: "N\xF8kken"
-  m_TagString: Untagged
+  m_TagString: Death
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -170,4 +170,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d6bf6a0e4875cf459ff57ed47784131, type: 3}
   m_Name: 
   m_EditorClassIdentifier: "Assembly-CSharp::N\xF8kkenEnemy"
-  moveSpeed: 10
+  moveSpeed: 4
