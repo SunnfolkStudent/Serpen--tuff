@@ -9,9 +9,11 @@ public class MenuController : MonoBehaviour
 {
     public GameObject startButton;
     public GameObject quitButton;
+    public GameObject creditsButton;
     public CanvasGroup canvasGroupStart;
     public CanvasGroup canvasGroupQuit;
     public CanvasGroup canvasGroupTitle;
+    public CanvasGroup canvasGroupCredits;
     public CanvasGroup canvasGroupScreen;
     public RectTransform background;
     public Transform backgroundMove;
@@ -58,12 +60,18 @@ public class MenuController : MonoBehaviour
         Application.Quit();
     }
 
+    public void Credits()
+    {
+        SceneManager.LoadScene("Credits");
+    }
+
    private IEnumerator FadeOutButtons()
     {
         while (canvasGroupStart.alpha  > 0)
         {
             canvasGroupStart.alpha -= 0.02f;
             canvasGroupQuit.alpha -= 0.02f;
+            canvasGroupCredits.alpha -= 0.02f;
             yield return new WaitForSeconds(0.01f);
             yield return null;
         }

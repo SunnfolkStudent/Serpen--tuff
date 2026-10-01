@@ -16,6 +16,7 @@ public class TrollEnemy : MonoBehaviour
     public AudioClip stompSlow;
     public AudioClip stompMedium;
     public AudioClip stompFast;
+    public AudioClip eat;
    
     private Transform _target;
     private Rigidbody2D _rigidbody2D;
@@ -37,6 +38,7 @@ public class TrollEnemy : MonoBehaviour
         _rigidbody2D.linearVelocityX = moveSpeed;
         
     }
+    
     
     IEnumerator StompFar()
     {
