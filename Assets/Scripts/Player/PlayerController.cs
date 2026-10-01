@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     private bool isInvincible = false;
     public bool canHide;
     public bool isDying;
+    public CanvasGroup canvasGroupScreenFade;
     
     private BoxCollider2D _boxCollider2D;
     private Animator _animator;
@@ -115,6 +116,27 @@ public class PlayerController : MonoBehaviour
 		}
 	}
 
+	private void OnTriggerEnter2D(Collider2D other)
+	{
+		if (other.transform.CompareTag("Stage1Exit"))
+		{
+			StartCoroutine(FadeOutScreen());
+			
+		}
+	}
+
+	private IEnumerator FadeOutScreen()
+	{
+		while (canvasGroupScreenFade.alpha  < 1)
+		{
+			canvasGroupScreenFade.alpha += 0.01f;
+			yield return new WaitForSeconds(0.01f);
+			yield return null;
+		}
+		SceneManager.LoadScene("Mire");
+		yield return null;
+        
+	}
 	private void FixedUpdate()
 	{
 		_rigidbody2D.linearVelocityX = _input.Horizontal * moveSpeed;

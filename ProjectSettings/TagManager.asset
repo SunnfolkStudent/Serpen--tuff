@@ -8,6 +8,7 @@ TagManager:
   - Death
   - NoHide
   - "N\xF8kkenKill"
+  - Stage1Exit
   layers:
   - Default
   - TransparentFX
