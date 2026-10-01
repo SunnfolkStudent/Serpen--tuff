@@ -174,7 +174,7 @@ public class PlayerController : MonoBehaviour
 		isDying = true;
 		_animator.Play("death_R");
 		yield return new WaitForSeconds(0.5f);
-		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+		SceneManager.LoadScene("Main Menu");
 	}
 
 	private void UpdateAnimations()
