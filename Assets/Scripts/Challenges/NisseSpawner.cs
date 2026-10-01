@@ -3,21 +3,27 @@ using UnityEngine;
 public class NisseSpawner : MonoBehaviour
 {
     public GameObject nisse;
-    
-    
-    private float i = 3;
+    public AudioClip nisseNoise;
 
-    
+    private float _random;
+    private AudioSource _audioSource;
+
+
+    private void Start()
+    {
+        _audioSource = GetComponent<AudioSource>();
+    }
     private void Update()
     {
-        if (i > 0)
+        if (_random > 0)
         {
-            i -= Time.deltaTime;
+            _random -= Time.deltaTime;
         }
         else
         {
             Instantiate(nisse, transform.position, transform.rotation);
-            i = 3;
+            _audioSource.PlayOneShot(nisseNoise);
+            _random = Random.Range(0, 4);
         }
     }
 }
