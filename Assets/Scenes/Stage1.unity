@@ -11260,6 +11260,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5396671611692300356, guid: a0c079c36eb1539418048cec6bab526b, type: 3}
+      propertyPath: eat
+      value: 
+      objectReference: {fileID: 8300000, guid: aa295ddcc0203a04d92699b470977b34, type: 3}
+    - target: {fileID: 5396671611692300356, guid: a0c079c36eb1539418048cec6bab526b, type: 3}
       propertyPath: moveSpeed
       value: -4
       objectReference: {fileID: 0}
