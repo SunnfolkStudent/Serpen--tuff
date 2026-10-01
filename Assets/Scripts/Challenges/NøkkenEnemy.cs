@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class NøkkenEnemy : MonoBehaviour
@@ -7,13 +8,16 @@ public class NøkkenEnemy : MonoBehaviour
     private Rigidbody2D _rigidbody;
     private int _direction;
     public GameObject Nøkken;
-    
+    private SpriteRenderer _spriteRenderer;
+    private Animator _animator;
+    private bool NøkkenIsSpawning;
 
     public float moveSpeed;
     
    
     private void Start()
     {
+        StartCoroutine(NøkkenSpawning());
         _target = GameObject.Find("Player").transform;
         _rigidbody = GetComponent<Rigidbody2D>();
        
@@ -33,9 +37,26 @@ public class NøkkenEnemy : MonoBehaviour
         _rigidbody.linearVelocityX = moveSpeed * _direction;
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.transform.CompareTag("NøkkenKill"))
             Destroy(Nøkken);
     }
+
+    private IEnumerator NøkkenSpawning()
+    {
+        NøkkenIsSpawning = true;
+        _animator.Play("nøkken_Spawn");
+        yield return new WaitForSeconds(0.5f);
+        NøkkenIsSpawning = false;
+    }
+
+    private void UpdateAnimations()
+    {
+        if (!NøkkenIsSpawning)
+        {
+            _animator.Play("nøkken_Chase");
+        }
+    }
+        
 }

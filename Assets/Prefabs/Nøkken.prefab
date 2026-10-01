@@ -172,7 +172,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: "Assembly-CSharp::N\xF8kkenEnemy"
   "N\xF8kken": {fileID: 2727703800440348197}
-  moveSpeed: 4
+  moveSpeed: 2.5
 --- !u!95 &-244773115049772528
 Animator:
   serializedVersion: 7

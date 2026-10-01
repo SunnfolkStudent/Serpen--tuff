@@ -14,12 +14,12 @@ public class NøkkenTrigger : MonoBehaviour
     {
         if (other.transform.CompareTag("Player"))
         {
-            _randomX = Random.Range(-20f, 20f);
+            _randomX = Random.Range(-15f, 15f);
             if ((-10 < _randomX) && (10 > _randomX))
             {
                 while ((-10 < _randomX) && (10 > _randomX))
                 {
-                    _randomX = Random.Range(-20f, 20f);
+                    _randomX = Random.Range(-15f, 15f);
                     
                 }
             }
