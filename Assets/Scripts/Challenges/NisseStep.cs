@@ -7,7 +7,9 @@ public class NisseStep : MonoBehaviour
     public AudioClip StepSound;
     public AudioClip NisseSound;
     public Rigidbody2D nisseSpotter;
-    public float moveSpeed;
+    public float moveSpeed = 0;
+    public Animator nisseAnimator;
+    public Rigidbody2D playerRigidbody;
     
     private AudioSource _audioSource;
 
@@ -15,6 +17,7 @@ public class NisseStep : MonoBehaviour
     private void Start()
     {
         _audioSource = GetComponent<AudioSource>();
+       
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -26,16 +29,26 @@ public class NisseStep : MonoBehaviour
 
     private IEnumerator Nisse()
     {
+        playerRigidbody.constraints = RigidbodyConstraints2D.FreezePositionX;
         _audioSource.PlayOneShot(NisseSound);
         yield return new WaitForSeconds(NisseSound.length);
         _audioSource.PlayOneShot(StepSound);
         moveSpeed = 1;
-        yield return new WaitForSeconds(StepSound.length + 4);
+        yield return new WaitForSeconds(StepSound.length);
+        playerRigidbody.constraints = RigidbodyConstraints2D.FreezeRotation;
         gameObject.SetActive(false);
     }
 
     private void FixedUpdate()
     {
-        nisseSpotter.velocity = new Vector2(moveSpeed, nisseSpotter.velocity.y);
+        nisseSpotter.linearVelocity = new Vector2(moveSpeed, nisseSpotter.linearVelocity.y);
+        if (moveSpeed == 0)
+        {
+            nisseAnimator.Play("still/idle_L");
+        }
+        else
+        {
+            nisseAnimator.Play("run_R");
+        }
     }
 }

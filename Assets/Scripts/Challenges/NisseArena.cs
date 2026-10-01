@@ -7,8 +7,11 @@ public class NisseArena : MonoBehaviour
    public Transform nisseWall2;
    public Transform nisseWall1Target;
    public Transform nisseWall2Target;
+   public Transform nisseWall1TargetEnd;
+   public GameObject nisseSpawner;
    
    private bool _arenaStart = false;
+   public float _arenaDuration = 90;
 
 
    private void Update()
@@ -24,7 +27,24 @@ public class NisseArena : MonoBehaviour
             
             return;
          }
+         nisseSpawner.SetActive(true);
       }
+      if (_arenaStart)
+      {
+          if (_arenaDuration > 0)
+          {
+             _arenaDuration -= Time.deltaTime;
+          }
+          else
+          {
+             while (!Mathf.Approximately(nisseWall1.position.y, nisseWall1TargetEnd.position.y))
+             {
+                nisseWall2.transform.position = Vector3.MoveTowards(nisseWall2.transform.position, nisseWall1TargetEnd.position,
+                0.005f * Time.deltaTime * Screen.width);
+             }
+          }
+      }
+      
    }
 
    private void OnTriggerEnter2D(Collider2D other)

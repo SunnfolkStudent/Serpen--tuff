@@ -9036,7 +9036,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1098905813933736762, guid: ec04e3353a9c8004aab76bf50fe5c766, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.98
+      value: -0.92
       objectReference: {fileID: 0}
     - target: {fileID: 1098905813933736762, guid: ec04e3353a9c8004aab76bf50fe5c766, type: 3}
       propertyPath: m_LocalPosition.y
@@ -9574,6 +9574,7 @@ MonoBehaviour:
   nisseWall2: {fileID: 2116255560}
   nisseWall1Target: {fileID: 828863190}
   nisseWall2Target: {fileID: 1715422039}
+  nisseSpawner: {fileID: 1655390716}
 --- !u!1 &1626453847
 GameObject:
   m_ObjectHideFlags: 0
@@ -9800,6 +9801,11 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!50 &1649239252 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 4187345692935878586, guid: ec04e3353a9c8004aab76bf50fe5c766, type: 3}
+  m_PrefabInstance: {fileID: 1526960274}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1650224013
 GameObject:
   m_ObjectHideFlags: 0
@@ -9908,7 +9914,7 @@ GameObject:
   m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1655390717
 Transform:
   m_ObjectHideFlags: 0
@@ -11172,8 +11178,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NisseStep
   StepSound: {fileID: 8300000, guid: 4c0ad434bbafa9f42a5cfcd2a2fa582d, type: 3}
   NisseSound: {fileID: 8300000, guid: f8477bfdcdc673b4ab4d3ba0e9456934, type: 3}
-  nisseSpotter: {fileID: 0}
+  nisseSpotter: {fileID: 67589181}
   moveSpeed: 0
+  nisseAnimator: {fileID: 67589180}
+  playerRigidbody: {fileID: 1649239252}
 --- !u!1 &2116255559
 GameObject:
   m_ObjectHideFlags: 0
