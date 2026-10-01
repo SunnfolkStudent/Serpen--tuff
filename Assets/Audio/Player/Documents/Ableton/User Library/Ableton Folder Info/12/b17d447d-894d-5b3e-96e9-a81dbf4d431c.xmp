@@ -1,0 +1,336 @@
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="XMP Core 6.0.0">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about=""
+            xmlns:dc="http://purl.org/dc/elements/1.1/"
+            xmlns:ablFR="https://ns.ableton.com/xmp/fs-resources/1.0/"
+            xmlns:xmp="http://ns.adobe.com/xap/1.0/">
+         <dc:format>application/vnd.ableton.factory-pack</dc:format>
+         <ablFR:resource>pack</ablFR:resource>
+         <ablFR:platform>win</ablFR:platform>
+         <ablFR:packUniqueId>www.ableton.com/0</ablFR:packUniqueId>
+         <ablFR:packVersion>4.0.61815</ablFR:packVersion>
+         <ablFR:items>
+            <rdf:Bag>
+               <rdf:li rdf:parseType="Resource">
+                  <ablFR:filePath>Racks/Instrument Racks/Synth Keys/Abyss Keys.adg</ablFR:filePath>
+                  <ablFR:colors>
+                     <rdf:Bag>
+                        <rdf:li>4</rdf:li>
+                        <rdf:li>6</rdf:li>
+                     </rdf:Bag>
+                  </ablFR:colors>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <ablFR:filePath>Devices/Instruments/Drift/Mallets/Hickory Bells.adv</ablFR:filePath>
+                  <ablFR:colors>
+                     <rdf:Bag>
+                        <rdf:li>1</rdf:li>
+                     </rdf:Bag>
+                  </ablFR:colors>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <ablFR:filePath>Devices/Instruments/Sampler/Synth Pad/Biig Saw Pad.adv</ablFR:filePath>
+                  <ablFR:colors>
+                     <rdf:Bag>
+                        <rdf:li>1</rdf:li>
+                     </rdf:Bag>
+                  </ablFR:colors>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <ablFR:filePath>Racks/Instrument Racks/Pad/Celestial Pad.adg</ablFR:filePath>
+                  <ablFR:colors>
+                     <rdf:Bag>
+                        <rdf:li>1</rdf:li>
+                     </rdf:Bag>
+                  </ablFR:colors>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <ablFR:filePath>Devices/Instruments/Meld/Synth Rhythmic/Werkstuecktraeger.adv</ablFR:filePath>
+                  <ablFR:colors>
+                     <rdf:Bag>
+                        <rdf:li>1</rdf:li>
+                     </rdf:Bag>
+                  </ablFR:colors>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <ablFR:filePath>Racks/Instrument Racks/Synth Lead/Grime Lead.adg</ablFR:filePath>
+                  <ablFR:colors>
+                     <rdf:Bag>
+                        <rdf:li>1</rdf:li>
+                     </rdf:Bag>
+                  </ablFR:colors>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <ablFR:filePath>Devices/Instruments/Meld/Effects/Darting Particulate.adv</ablFR:filePath>
+                  <ablFR:colors>
+                     <rdf:Bag>
+                        <rdf:li>2</rdf:li>
+                     </rdf:Bag>
+                  </ablFR:colors>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <ablFR:filePath>Racks/Instrument Racks/Synth Lead/Theremin Whistle.adg</ablFR:filePath>
+                  <ablFR:colors>
+                     <rdf:Bag>
+                        <rdf:li>1</rdf:li>
+                        <rdf:li>6</rdf:li>
+                     </rdf:Bag>
+                  </ablFR:colors>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <ablFR:filePath>Devices/Instruments/Analog/Synth Keys/Accordion Unisono Pad.adv</ablFR:filePath>
+                  <ablFR:colors>
+                     <rdf:Bag>
+                        <rdf:li>3</rdf:li>
+                     </rdf:Bag>
+                  </ablFR:colors>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <ablFR:filePath>Racks/Instrument Racks/Evolving/Wave Evolve Pad.adg</ablFR:filePath>
+                  <ablFR:colors>
+                     <rdf:Bag>
+                        <rdf:li>6</rdf:li>
+                     </rdf:Bag>
+                  </ablFR:colors>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <ablFR:filePath>Racks/Instrument Racks/Bass/Corrosive Bass.adg</ablFR:filePath>
+                  <ablFR:colors>
+                     <rdf:Bag>
+                        <rdf:li>4</rdf:li>
+                     </rdf:Bag>
+                  </ablFR:colors>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <ablFR:filePath>Devices/Instruments/Wavetable/Bass/Amber Low Glow.adv</ablFR:filePath>
+                  <ablFR:colors>
+                     <rdf:Bag>
+                        <rdf:li>6</rdf:li>
+                     </rdf:Bag>
+                  </ablFR:colors>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <ablFR:filePath>Devices/Instruments/Wavetable/Bass/Golden Growl.adv</ablFR:filePath>
+                  <ablFR:colors>
+                     <rdf:Bag>
+                        <rdf:li>7</rdf:li>
+                     </rdf:Bag>
+                  </ablFR:colors>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <ablFR:filePath>Racks/Instrument Racks/Mallets/Water Bells.adg</ablFR:filePath>
+                  <ablFR:colors>
+                     <rdf:Bag>
+                        <rdf:li>1</rdf:li>
+                     </rdf:Bag>
+                  </ablFR:colors>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <ablFR:filePath>Racks/Drum Racks/Acoustic/Tamuz Kit.adg</ablFR:filePath>
+                  <ablFR:colors>
+                     <rdf:Bag>
+                        <rdf:li>7</rdf:li>
+                     </rdf:Bag>
+                  </ablFR:colors>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <ablFR:filePath>Devices/Instruments/Wavetable/Bass/Wowble Bass.adv</ablFR:filePath>
+                  <ablFR:colors>
+                     <rdf:Bag>
+                        <rdf:li>6</rdf:li>
+                     </rdf:Bag>
+                  </ablFR:colors>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <ablFR:filePath>Racks/Instrument Racks/Brass/Moody Fanfare.adg</ablFR:filePath>
+                  <ablFR:colors>
+                     <rdf:Bag>
+                        <rdf:li>5</rdf:li>
+                     </rdf:Bag>
+                  </ablFR:colors>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <ablFR:filePath>Racks/Instrument Racks/Brass/Drop Brass.adg</ablFR:filePath>
+                  <ablFR:colors>
+                     <rdf:Bag>
+                        <rdf:li>7</rdf:li>
+                     </rdf:Bag>
+                  </ablFR:colors>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <ablFR:filePath>Racks/Instrument Racks/Pad/Vista Cruiser.adg</ablFR:filePath>
+                  <ablFR:colors>
+                     <rdf:Bag>
+                        <rdf:li>3</rdf:li>
+                     </rdf:Bag>
+                  </ablFR:colors>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <ablFR:filePath>Racks/Instrument Racks/Synth Rhythmic/Snow Peaks Arp.adg</ablFR:filePath>
+                  <ablFR:colors>
+                     <rdf:Bag>
+                        <rdf:li>5</rdf:li>
+                     </rdf:Bag>
+                  </ablFR:colors>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <ablFR:filePath>Racks/Instrument Racks/Synth Rhythmic/Basic Signal Arp.adg</ablFR:filePath>
+                  <ablFR:colors>
+                     <rdf:Bag>
+                        <rdf:li>6</rdf:li>
+                     </rdf:Bag>
+                  </ablFR:colors>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <ablFR:filePath>Racks/Instrument Racks/Pad/Daysleeper Swells Pad.adg</ablFR:filePath>
+                  <ablFR:colors>
+                     <rdf:Bag>
+                        <rdf:li>1</rdf:li>
+                     </rdf:Bag>
+                  </ablFR:colors>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <ablFR:filePath>Racks/Instrument Racks/Piano &amp; Keys/Clav Anvil.adg</ablFR:filePath>
+                  <ablFR:colors>
+                     <rdf:Bag>
+                        <rdf:li>7</rdf:li>
+                     </rdf:Bag>
+                  </ablFR:colors>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <ablFR:filePath>Samples/One Shots/Stab/Stab Twinkle Gmin.wav</ablFR:filePath>
+                  <ablFR:colors>
+                     <rdf:Bag>
+                        <rdf:li>2</rdf:li>
+                     </rdf:Bag>
+                  </ablFR:colors>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <ablFR:filePath>Devices/Instruments/Meld/Bass/Comb Bass.adv</ablFR:filePath>
+                  <ablFR:colors>
+                     <rdf:Bag>
+                        <rdf:li>6</rdf:li>
+                     </rdf:Bag>
+                  </ablFR:colors>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <ablFR:filePath>Devices/Instruments/Meld/Synth Keys/ColFm2.adv</ablFR:filePath>
+                  <ablFR:colors>
+                     <rdf:Bag>
+                        <rdf:li>4</rdf:li>
+                     </rdf:Bag>
+                  </ablFR:colors>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <ablFR:filePath>Devices/Instruments/Meld/Effects/Exquisite Wasteland.adv</ablFR:filePath>
+                  <ablFR:colors>
+                     <rdf:Bag>
+                        <rdf:li>7</rdf:li>
+                     </rdf:Bag>
+                  </ablFR:colors>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <ablFR:filePath>Racks/Instrument Racks/Mallets/Faux Microtonal Glass Mallet.adg</ablFR:filePath>
+                  <ablFR:colors>
+                     <rdf:Bag>
+                        <rdf:li>7</rdf:li>
+                     </rdf:Bag>
+                  </ablFR:colors>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <ablFR:filePath>Devices/Audio Effects/Amp/Screamer.adv</ablFR:filePath>
+                  <ablFR:colors>
+                     <rdf:Bag>
+                        <rdf:li>1</rdf:li>
+                     </rdf:Bag>
+                  </ablFR:colors>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <ablFR:filePath>Racks/Instrument Racks/Piano &amp; Keys/Childhood Home Piano.adg</ablFR:filePath>
+                  <ablFR:colors>
+                     <rdf:Bag>
+                        <rdf:li>1</rdf:li>
+                        <rdf:li>7</rdf:li>
+                     </rdf:Bag>
+                  </ablFR:colors>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <ablFR:filePath>Samples/One Shots/Instrument/Synth/Synth Note Ring Modular.wav</ablFR:filePath>
+                  <ablFR:colors>
+                     <rdf:Bag>
+                        <rdf:li>1</rdf:li>
+                     </rdf:Bag>
+                  </ablFR:colors>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <ablFR:filePath>Racks/Audio Effect Racks/Amp Simulation/Scream Dream.adg</ablFR:filePath>
+                  <ablFR:colors>
+                     <rdf:Bag>
+                        <rdf:li>1</rdf:li>
+                     </rdf:Bag>
+                  </ablFR:colors>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <ablFR:filePath>Racks/Audio Effect Racks/Amp Simulation/Stevie Blues Stack.adg</ablFR:filePath>
+                  <ablFR:colors>
+                     <rdf:Bag>
+                        <rdf:li>1</rdf:li>
+                     </rdf:Bag>
+                  </ablFR:colors>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <ablFR:filePath>Devices/Instruments/Tension/Effects/Wire Noise.adv</ablFR:filePath>
+                  <ablFR:colors>
+                     <rdf:Bag>
+                        <rdf:li>3</rdf:li>
+                     </rdf:Bag>
+                  </ablFR:colors>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <ablFR:filePath>Racks/Instrument Racks/Plucked/Snappy Pluck.adg</ablFR:filePath>
+                  <ablFR:colors>
+                     <rdf:Bag>
+                        <rdf:li>7</rdf:li>
+                     </rdf:Bag>
+                  </ablFR:colors>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <ablFR:filePath>Samples/Loops/Drums/Percussion/Agogo Bells 90 bpm.aif</ablFR:filePath>
+                  <ablFR:colors>
+                     <rdf:Bag>
+                        <rdf:li>7</rdf:li>
+                     </rdf:Bag>
+                  </ablFR:colors>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <ablFR:filePath>Devices/Audio Effects/Redux/Chiptune Filter.adv</ablFR:filePath>
+                  <ablFR:colors>
+                     <rdf:Bag>
+                        <rdf:li>6</rdf:li>
+                     </rdf:Bag>
+                  </ablFR:colors>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <ablFR:filePath>Racks/Instrument Racks/Mallets/Island Pans.adg</ablFR:filePath>
+                  <ablFR:colors>
+                     <rdf:Bag>
+                        <rdf:li>1</rdf:li>
+                     </rdf:Bag>
+                  </ablFR:colors>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <ablFR:filePath>Racks/Instrument Racks/Mallets/Queen Pans.adg</ablFR:filePath>
+                  <ablFR:colors>
+                     <rdf:Bag>
+                        <rdf:li>1</rdf:li>
+                     </rdf:Bag>
+                  </ablFR:colors>
+               </rdf:li>
+            </rdf:Bag>
+         </ablFR:items>
+         <xmp:CreatorTool>Updated by Ableton Index 12.4.6</xmp:CreatorTool>
+         <xmp:CreateDate>2026-08-25T12:59:14-05:00</xmp:CreateDate>
+         <xmp:MetadataDate>2026-09-28T11:58:01+02:00</xmp:MetadataDate>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta>
