@@ -20,5 +20,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Mire.unity
     guid: 764702b4d675bc04db8111437615b3ba
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: b3401b6339db4dd42a921795ce378e18
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

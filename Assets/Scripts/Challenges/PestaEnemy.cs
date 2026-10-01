@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class PestaEnemy : MonoBehaviour
@@ -6,10 +7,13 @@ public class PestaEnemy : MonoBehaviour
 
     private Vector3 _attackDirection;
     private Transform _target;
+    private Animator _animator;
 
     private void Start()
     {
-        _target = GameObject.Find("Player").transform;
+        _animator = GetComponent<Animator>();
+        StartCoroutine(Spawn());
+        
     }
 
     private void Update()
@@ -17,5 +21,13 @@ public class PestaEnemy : MonoBehaviour
         _attackDirection = Vector3.Normalize(_target.position - transform.position);
 
         transform.position += _attackDirection * (moveSpeed * Time.deltaTime);
+    }
+
+    private IEnumerator Spawn()
+    {
+        _animator.Play("spawn");
+        yield return new WaitForSeconds(1.5f);
+        _target = GameObject.Find("Player").transform;
+        _animator.Play("follow/walk");
     }
 }
