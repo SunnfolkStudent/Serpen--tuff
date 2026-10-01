@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 3142823201106644797}
   m_Layer: 0
   m_Name: Troll
-  m_TagString: Untagged
+  m_TagString: Death
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -116,7 +116,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 11
   m_MaskInteraction: 0
   m_Sprite: {fileID: 4030797374940142613, guid: 4595be07e492ca542ada4840eea98752, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -168,18 +168,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e6de6bc232bd42498f6f16d129ed417, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrollEnemy
-  moveSpeed: -5
+  moveSpeed: -3
   whatIsWall:
     serializedVersion: 2
     m_Bits: 128
   wallCheck: {fileID: 5847502536992066155}
-  stomp: {fileID: 8300000, guid: 757972a550410044eb6cd35349524234, type: 3}
-  sightRangeFar: 30
-  sightRangeMedium: 20
-  sightRangeNear: 10
+  sightRangeFar: 70
+  sightRangeMedium: 40
+  sightRangeNear: 11
   audioFarActive: 0
   audioMediumActive: 0
   audioNearActive: 0
+  stompSlow: {fileID: 8300000, guid: 80c04553701571c4385cb95d9316d2d9, type: 3}
+  stompMedium: {fileID: 8300000, guid: e16d5cac3b9a012439a4f6c6c1203401, type: 3}
+  stompFast: {fileID: 8300000, guid: fedcb1636ae22994393c8313b26f4274, type: 3}
 --- !u!82 &4097081972585781048
 AudioSource:
   m_ObjectHideFlags: 0
