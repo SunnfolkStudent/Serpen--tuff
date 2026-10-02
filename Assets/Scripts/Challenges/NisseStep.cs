@@ -29,7 +29,7 @@ public class NisseStep : MonoBehaviour
 
     private IEnumerator Nisse()
     {
-        playerRigidbody.constraints = RigidbodyConstraints2D.FreezePositionX;
+        playerRigidbody.constraints = RigidbodyConstraints2D.FreezeAll;
         _audioSource.PlayOneShot(NisseSound);
         yield return new WaitForSeconds(NisseSound.length);
         _audioSource.PlayOneShot(StepSound);

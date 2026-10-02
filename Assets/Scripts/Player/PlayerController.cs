@@ -123,6 +123,10 @@ public class PlayerController : MonoBehaviour
 			StartCoroutine(FadeOutScreen());
 			
 		}
+		else if (other.transform.CompareTag("Stage2Exit"))
+		{
+			SceneManager.LoadScene("Village");
+		}
 	}
 
 	private IEnumerator FadeOutScreen()
