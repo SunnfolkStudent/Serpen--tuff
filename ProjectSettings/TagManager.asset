@@ -10,6 +10,7 @@ TagManager:
   - "N\xF8kkenKill"
   - Stage1Exit
   - NisseTrigger
+  - Stage2Exit
   layers:
   - Default
   - TransparentFX

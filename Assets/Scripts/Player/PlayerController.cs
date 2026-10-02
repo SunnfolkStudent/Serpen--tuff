@@ -123,6 +123,12 @@ public class PlayerController : MonoBehaviour
 			StartCoroutine(FadeOutScreen());
 			
 		}
+
+		if (other.transform.CompareTag("Stage2Exit"))
+		{
+			StartCoroutine(FadeOutScreenMire());
+		}
+		
 	}
 
 	private IEnumerator FadeOutScreen()
@@ -137,6 +143,13 @@ public class PlayerController : MonoBehaviour
 		yield return null;
         
 	}
+
+	private IEnumerator FadeOutScreenMire()
+	{
+		SceneManager.LoadScene("Village");
+		yield return null;
+	}
+
 	private void FixedUpdate()
 	{
 		_rigidbody2D.linearVelocityX = _input.Horizontal * moveSpeed;
