@@ -143,7 +143,7 @@ public class PlayerController : MonoBehaviour
 			yield return new WaitForSeconds(0.01f);
 			yield return null;
 		}
-		SceneManager.LoadScene("Mire");
+		SceneManager.LoadScene("Mire_New");
 		yield return null;
         
 	}

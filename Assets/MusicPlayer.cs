@@ -9,7 +9,7 @@ public class MusicManager : MonoBehaviour
     public AudioClip[] playlist;    // Music array
 
     private int currentSongIndex = 0; //Song Index
-
+    
     // Play song on startup (from currentSongIndex) 
     void Start()
     {
