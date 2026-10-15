@@ -9071,15 +9071,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 710012066418218220, guid: ec04e3353a9c8004aab76bf50fe5c766, type: 3}
       propertyPath: jumpSpeed
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1098905813933736762, guid: ec04e3353a9c8004aab76bf50fe5c766, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.8
+      value: -1.396
       objectReference: {fileID: 0}
     - target: {fileID: 1098905813933736762, guid: ec04e3353a9c8004aab76bf50fe5c766, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.31
+      value: -0.343
       objectReference: {fileID: 0}
     - target: {fileID: 1098905813933736762, guid: ec04e3353a9c8004aab76bf50fe5c766, type: 3}
       propertyPath: m_LocalPosition.z
