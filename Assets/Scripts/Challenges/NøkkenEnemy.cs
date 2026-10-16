@@ -17,18 +17,23 @@ public class NøkkenEnemy : MonoBehaviour
    
     private void Start()
     {
-        StartCoroutine(NøkkenSpawning());
+        _animator = GetComponent<Animator>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
+        
         _target = GameObject.Find("Player").transform;
         _rigidbody = GetComponent<Rigidbody2D>();
+        
        
 
         if (_target.transform.position.x > transform.position.x)
         {
             _direction = 1;
+            _spriteRenderer.flipX = true;
         }
         else if (_target.transform.position.x < transform.position.x)
         {
             _direction = -1;
+            _spriteRenderer.flipX = false;
         }
     }
 
@@ -43,15 +48,15 @@ public class NøkkenEnemy : MonoBehaviour
             Destroy(Nøkken);
     }
 
-    private IEnumerator NøkkenSpawning()
+    public IEnumerator NøkkenSpawning()
     {
         NøkkenIsSpawning = true;
         _animator.Play("nøkken_Spawn");
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(2f);
         NøkkenIsSpawning = false;
     }
 
-    private void Update()
+    private void UpdateAnimations()
     {
         if (!NøkkenIsSpawning)
         {

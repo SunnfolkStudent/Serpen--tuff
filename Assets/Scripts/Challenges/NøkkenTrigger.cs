@@ -7,11 +7,9 @@ public class NøkkenTrigger : MonoBehaviour
     private float _randomX;
     private Vector2 _randomSpawn;
     
-
-   
-    
     private void OnTriggerStay2D(Collider2D other)
     {
+        GetComponent<NøkkenEnemy>();
         if (other.transform.CompareTag("Player"))
         {
             _randomX = Random.Range(-15f, 15f);
@@ -26,8 +24,13 @@ public class NøkkenTrigger : MonoBehaviour
             else
             {
                 _randomSpawn = new Vector2(transform.position.x + _randomX, transform.position.y);
-             Instantiate(nøkken, _randomSpawn, transform.rotation);
-             nøkkenTrigger.SetActive(false);
+                
+                var clone = Instantiate(nøkken, _randomSpawn, transform.rotation);
+                clone.TryGetComponent(out NøkkenEnemy nøkkenEnemy);
+             
+                StartCoroutine(nøkkenEnemy.NøkkenSpawning());
+              
+                nøkkenTrigger.SetActive(false);
             }
         }
     }
