@@ -127,11 +127,16 @@ public class PlayerController : MonoBehaviour
 		{
 			SceneManager.LoadScene("Village");
 		}
+		else if (other.transform.CompareTag("Stage3Exit"))
+		{
+			SceneManager.LoadScene("Ending");
+		}
 
 		if (other.transform.CompareTag("Stage2Exit"))
 		{
 			StartCoroutine(FadeOutScreenMire());
 		}
+		
 		
 	}
 
